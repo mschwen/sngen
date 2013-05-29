@@ -1,0 +1,1 @@
+awk -f print_col.awk ../S15s7b_lumen.dat

@@ -1,0 +1,247 @@
+********************************************************************************
+*  Filename: sn_user.dat                                    [Formatting matters]
+********************************************************************************
+********************************************************************************
+* Distance to the supernova (in kpc)
+********************************************************************************
+
+distance = [nominal = 10 kpc; far edge = 23.4 kpc; SN1987A = 51.3 kpc]
+ 10.00d+00
+
+********************************************************************************
+* Neutrino masses (in eV/c^2)
+********************************************************************************
+
+mass_nu_e =
+ 0.00d+00  
+mass_nu_e_bar = 
+ 0.00d+00  
+mass_nu_mu =
+ 0.00d+00  
+mass_nu_mu_bar =
+ 0.00d+00
+mass_nu_tau =
+ 0.00d+00
+mass_nu_tau_bar =
+ 0.00d+00
+
+********************************************************************************
+* Direction to the supernova (dec,ra: in degrees)
+********************************************************************************
+
+declination (degrees) = [Betelgeuse: dec = +7 degrees 24' 25.3'']
+ +7.407027778d+00
+right_ascension (degrees) = [Betelgeuse: ra = 5h 55m 10.29s or 5.919525h]
+ 88.792875d+00 
+SN date/time (Sudbury time:hhmmss.s) = [January 20, 2000 02:16:07.1203051]
+ 20000120 021607.1203051
+
+********************************************************************************
+* Supernova Model
+*a*******************************************************************************
+
+sn_model_switch = [1: Burrows; 2: Beacom&Vogel; 3: Bruenn_15; 4: Bruenn_25
+                   5: Mezzacappa_13]
+ 2
+use_author_params = [for models 1 or 2, use cross sections,#targets from author]
+ 0
+sn_model_stats = [1: yes- energy and count stats, etc; 0: no output]
+ 0
+
+********************************************************************************
+* Number of supernova bursts to generate
+********************************************************************************
+
+n_supernova =
+ 1 
+
+********************************************************************************
+* Flavour swapping (0: no swapping, 1: swapping)
+********************************************************************************
+
+swap_flag = 
+ 0
+
+********************************************************************************
+* Generator flag (0=do all calcs; 1=do src calcs, specify sample counts;
+*                 2=skip sampling; 3=skip gen,sampling->SNOMAN)
+********************************************************************************
+
+gen_flag =
+ 0
+counts_file =
+ dat/counts/sn_counts.dat
+
+********************************************************************************
+* Supernova luminosity/energy fit output flag (1:produce output; 0:no output)
+* Supernova luminosity/energy fit filename
+********************************************************************************
+
+lumen_fit_file_flag =
+ 0
+lumen_nu_e_file =
+ lumen_nu_e.out
+lumen_nu_eb_file =
+ lumen_nu_eb.out
+lumen_nu_mu_file =
+ lumen_nu_mu.out
+ 
+********************************************************************************
+* Supernova luminosity cutoff flag (1:apply cutoff; 0:no cutoff)
+* Supernova luminosity cutoff time (ms)
+********************************************************************************
+
+lum_cutoff_flag =
+ 0
+lum_cutoff_time = 
+ 1000.d0
+
+********************************************************************************
+* Supernova Fermi-Dirac spectral shape output flag
+* Supernova Fermi-Dirac spectral shape time (ms) and filenames
+********************************************************************************
+
+FD_shape_file_flag =
+ 0
+FD_time =
+ 460.d0
+FD_file_nu_e =
+ fd_nu_e.out
+FD_file_nu_eb =
+ fd_nu_eb.out
+FD_file_nu_mu =
+ fd_nu_mu.out
+
+********************************************************************************
+* Central Energy
+********************************************************************************
+
+central_flag =
+ 0
+central_file =
+ central.out
+
+********************************************************************************
+* Cross section output filename
+********************************************************************************
+
+xsection_file_flag =
+ 1
+xsection_file =
+ xsect/xsect00.out
+
+********************************************************************************
+* Detector elastic scattering electron energy threshold  (in MeV)
+* (for use in ES cross section calculations)
+********************************************************************************
+
+T_e_min = 
+ 0.0d0
+
+********************************************************************************
+* Neutrino countrate/count/cumulative count sum filenames
+********************************************************************************
+
+all_crfile =
+ countrate_all.out
+es_crfile, cc_crfile, es_crfile = 
+ countrate_es.out countrate_cc.out countrate_nc.out
+nu_e_crfile, nu_eb_crfile, nu_mu_crfile =
+ countrate_nu_e.out countrate_nu_eb.out countrate_nu_mu.out
+d2o_crfile, h2o_crfile, av_crfile =
+ countrate_d2o.out countrate_h2o.out countrate_av.out
+
+all_cfile =
+ count_all.out
+es_cfile, cc_cfile, es_cfile =
+ count_es.out count_cc.out count_nc.out
+nu_e_cfile, nu_eb_cfile, nu_mu_cfile =
+ count_nu_e.out count_nu_eb.out count_nu_mu.out
+d2o_cfile, h2o_cfile, av_cfile =
+ count_d2o.out count_h2o.out count_av.out
+
+all_cumcfile =
+ cumcount_all.out
+es_cumcfile, cc_cumcfile, es_cumcfile =
+ cumcount_es.out cumcount_cc.out cumcount_nc.out
+nu_e_cumcfile, nu_eb_cumcfile, nu_mu_cumcfile =
+ cumcount_nu_e.out cumcount_nu_eb.out cumcount_nu_mu.out
+d2o_cumcfile, h2o_cumcfile, av_cumcfile =
+ cumcount_d2o.out cumcount_h2o.out cumcount_av.out
+
+********************************************************************************
+* Poisson statistics flag
+********************************************************************************
+
+pois_flag =
+ 0
+
+********************************************************************************
+* Time overlap flag 
+* Time overlap filename
+* SNO trigger gate time window (ms) [see how many events overlap]
+********************************************************************************
+
+time_overlap_flag =
+ 0
+time_overlap_file =
+ time_overlap.out
+trigger_gate = [440 ns]
+ 4.40d-04
+
+********************************************************************************
+* Supernova sampling filename
+********************************************************************************
+
+nu_sample_file =
+ sam/nu_sam00.out
+part_sample_file =
+ sam/part_sam00.out
+
+********************************************************************************
+* Sampling efficiency flag
+********************************************************************************
+
+efficiency_flag =
+ 0
+
+********************************************************************************
+* SNOMAN MCPL output file stuff
+********************************************************************************
+
+mcpl_flag =
+ 1
+mcpl_file = [format = <file>##.out; increment routine looks for '.']
+ snoman/new/mcpl00.out
+mcpl_default = [used in the 'create_cmd' routine]
+ mcpl00.out
+
+********************************************************************************
+* SNOMAN .cmd output file stuff
+********************************************************************************
+
+cmd_flag =
+ 0
+cmd_default = [format = <file>##.out; increment routine looks for '.']
+ snoman/new/sn00.cmd
+zdab_flag =
+ 0
+zdab_default =
+ sn00.zdab
+hbook_default =
+ sn00.hbk
+
+********************************************************************************
+* SNOMAN Monte Carlo Parameters
+********************************************************************************
+
+nhit_thres = [default NHIT = 16 -> 1.8 MeV @ 9 NHIT / MeV]
+ 0.
+comp_thres = [default NHIT = 10; but need 0 for NCDs]
+ 0.
+pmt_efficiency = [default = 0.561] basically fudge factor so MC matches Calib
+ 0.561
+h2o_in_d2o = [default = 0.000824]
+ 0.000824
+O17_in_d2o = [default = 0.000485]
+ 0.000485

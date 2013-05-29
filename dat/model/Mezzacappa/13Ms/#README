@@ -1,0 +1,31 @@
+--------------------------------------------------------------------------------
+------------------------------------
+Run:             gra6e12flash at radius R =  500.00000 km (Liebendoerfer et al. 
+2001, Phys. Rev. D, 63, 103004)
+#time slices, #energy groups
+   665            12
+--------------------------------------------------------------------------------
+------------------------------------
+ t:  time after bounce [s]
+ E:  group energy [MeV]
+ dE: group size [MeV]
+ Lx: number luminosity/dE [1/MeV/s]
+     Lx = 4piR^2*lapsefunction * 4pic E^2/(hc)^3 * Gx
+     Gx = first angular moment of neutrino
+          distribution function for comoving observers
+ Ex: group energy at infinity [MeV]
+ x:  e    ... electron neutrino
+     ebar ... electron anti neutrino
+     m    ... mu or tau neutrino
+     mbar ... mu or tau anti neutrino
+ total luminosities at infinity:
+ number = sum_{groups} Lx*dE
+ energy = sum_{groups} Lx*Ex*dE
+        ~ sum_{groups} Lx*E*dE
+--------------------------------------------------------------------------------
+------------------------------------
+t               E         dE        Le        Lebar     Lm        Lmbar     Ee  
+      Eebar     Em        Embar
+--------------------------------------------------------------------------------
+------------------------------------
+

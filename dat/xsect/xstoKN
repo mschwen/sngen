@@ -1,0 +1,4 @@
+rm xs_nu_d_cc.dat
+ln -s xs_nu_d_cc_KN93.dat xs_nu_d_cc.dat
+rm xs_nu_d_nc.dat
+ln -s xs_nu_d_nc_KN93.dat xs_nu_d_nc.dat

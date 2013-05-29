@@ -1,0 +1,1 @@
+awk -f lumen.awk S25s7b_lumen.dat

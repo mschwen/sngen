@@ -1,0 +1,2 @@
+Note: add non-zero values for "0.00" entries in order to have spline fit smooth;
+      should have no impact on results

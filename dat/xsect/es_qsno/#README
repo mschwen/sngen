@@ -1,0 +1,12 @@
+ES radiative corrections obtained from qphysics routine of qsno
+
+1. Launch root (in qsno bin area)
+2. Setup as in "qphysics_setup.txt" (may be in .rootlogon.C, otherwise type
+   at root command prompt
+3. Edit "make_pnue_tables.C" to taste (ie., may not want diff values)
+4. At root command prompt, type ".x make_pnue_tables.C"
+5. Takes about an hour or so (3478.78 sec on PIII)
+6. Remove top two lines and copy to $SNGEN_ROOT/dat/xsect
+
+The data tables here were obtained from qsno 020.2 (Aug 16, 2004)
+Note: the PNue.cxx routine was editted to include updated PDG2004 constants

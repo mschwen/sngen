@@ -1,0 +1,6 @@
+values obtained from website: http://nuc003.psc.sc.edu/~kubodera/NU-D-NSGK/
+
+"parse gets format close, then use vi:
+  * :%s/(//g
+  * :%s/)//g
+  * delete "e"s for Enu = 0 entries

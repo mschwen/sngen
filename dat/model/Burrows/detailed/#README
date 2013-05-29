@@ -1,0 +1,7 @@
+The focus is on breakout.  The first column is energy_electron.type (MeV),
+the second colu mn is the luminosity spectrum (10^{54} ergs/s/MeV), and
+the third/fourth and fifth/six th columns are the corresponding data for
+the anti-electron types and the total for the mu/tau (and anti-mu/tau)
+types, respectively.  The time in seconds is given at the top left-hand
+corner of the corresponding block of data. This work is described in
+Thompson, Burrows, and Pinto (2002, astro-ph/0211194).

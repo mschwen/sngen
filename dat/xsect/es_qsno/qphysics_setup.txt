@@ -1,0 +1,2 @@
+.x /usr/local/qsno/qsno_020.2/qphysics/setup_qphysics.C
+

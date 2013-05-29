@@ -1,0 +1,82 @@
+                 How to Use the SNO Supernova Generator
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Updated: September 10, 2004 by Jaret Heise
+
+Here are steps to follow when using the SNO Supernova Generator code:
+
+0. Edit the Makefile and uncomment/comment out the appropriate machine/
+   platform settings.
+
+1. Edit the user file: 'sn_user.dat' which is found in the top level of
+   the 'dat' directory:
+
+	o dat/sn_user.dat
+
+2. Make sure the output directories are created.  By default, the output
+   directories are the following:
+
+	o ./sam         (sampling output)
+	o ./snoman/new  (needed if MCPL and cmd files are being output)
+	o ./xsect       (needed only if xsect data is output) 
+
+   The design of the program is such that memory is sacrificed for speed.
+   Many of the calculations are done only once and stored in (rather large)
+   arrays.  The sampled particle information is written to file to make
+   regeneration of the SNOMAN command and MCPL files easier in the event that
+   only those files need to be changed.
+
+3. If you have changed the model being used, you *will* need to edit the
+   following files:
+
+	o energy_size.inc
+        o time_size.inc      (default is fine, but change for count stats)
+        o sn_flux.f          (if changing from Burrows/B&V -> Bruenn/Mezz)
+	o flux_size.inc
+        o file_flux_size.inc (for Bruenn and Mezzacappa models)
+
+   There are notes in these files saying what needs to be commented and
+   uncommented depending on the model chosen. The values that need changing
+   govern the size of the storage arrays discussed above.
+
+4. If the distance is fairly close, you may need to edit the following
+   files:
+
+	o sn_count_size.inc   (total number of neutrinos currently 125000)
+	o sample_count_size.inc (largest number per interaction currently 
+          55000)
+
+    The current settings are good for 100 supernovae at 10 kpc, or
+    alternatively, for 1 supernova at 1 kpc
+
+5. If you want to increase the number of energy or time steps, you will
+   need to increase the array size in:
+
+	o flux_size.inc
+
+   as well as edit the "read_user.f" file where the step sizes are specified.
+
+6. Recompile the source code.
+
+7. Provide a link to the executable in the src directory:
+
+	o ln -s src/sngen sngen
+
+8. Run the generator executable: 'sngen'
+
+     -> at the moment you interactively chose which reactions to look at
+     -> to run all interactions and send the standard output to a file, use: 
+
+           "sngen < input/input_all >& sngen-100x10kpc.log"
+
+9. For producing the Ecountrate instead of the countrate in time, use sngen_bk
+
+        o Burrows model takes a *long* time, so use Beacom & Vogel
+        o probably don't want to sample
+
+10. Files needed by the SNOMAN analysis of the SN ZDAB files are located in:
+
+        o snoman/analysis
+
+    Rather than put everything in the create_cmd.f routine, more and more 
+    emphasis will be placed on these files.

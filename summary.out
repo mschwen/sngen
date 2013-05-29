@@ -1,0 +1,39 @@
+                      Supernova Neutrino Summary
+                      ==============================
+
+Supernova Model: Beacom & Vogel (1998)         
+
+81) nu_e + 208Pb --> nu_e + 207Pb + n               Pb NC    0.426
+82) nu_e + 208Pb --> nu_e + 206Pb + 2n              Pb NC    0.039
+86) nu_e_bar + 208Pb --> nu_e_bar 207Pb + n         Pb NC    0.921
+87) nu_e_bar + 208Pb --> nu_e_bar 206Pb + 2n        Pb NC    0.230
+89) nu_mu + 208Pb --> nu_mu + 207Pb + n             Pb NC    2.852
+90) nu_mu + 208Pb --> nu_mu + 206Pb + 2n            Pb NC    1.959
+92) nu_mu_bar + 208Pb --> nu_mu_bar + 207Pb + n     Pb NC    2.263
+93) nu_mu_bar + 208Pb --> nu_mu_bar + 206Pb + 2n    Pb NC    1.455
+95) nu_tau + 208Pb --> nu_tau + 207Pb + n           Pb NC    2.852
+96) nu_tau + 208Pb --> nu_tau + 206Pb + 2n          Pb NC    1.959
+98) nu_tau_bar + 208Pb --> nu_tau_bar + 207Pb + n   Pb NC    2.263
+99) nu_tau_bar + 208Pb --> nu_tau_bar + 206Pb + 2n  Pb NC    1.455
+
+TOTAL NEUTRINO COUNTS (all reactions)....................  18.673 [  17]
+
+  nu_e total neutrino counts (all reactions).............    0.465 [   0] (  2.5%)
+  nu_ebar total neutrino counts (all reactions)..........    1.150 [   1] (  6.2%)
+  nu_"mu" total neutrino counts (all reactions)..........   17.058 [  16] ( 91.4%)
+
+  CC total neutrino counts (all reactions)...............    0.000 [   0] (  0.0%)
+  NC total neutrino counts (all reactions)...............   18.673 [  17] (100.0%)
+  ES total neutrino counts (all reactions)...............    0.000 [   0] (  0.0%)
+
+
+TOTAL PARTICLE COUNTS (all reactions)....................  25.769 [  23]
+
+  nu_e total particle counts (all reactions).............    0.503 [   0] (  2.0%)
+  nu_ebar total particle counts (all reactions)..........    1.380 [   1] (  5.4%)
+  nu_"mu" total particle counts (all reactions)..........   23.886 [  22] ( 92.7%)
+
+  CC total particle counts (all reactions)...............    0.000 [   0] (  0.0%)
+  NC total particle counts (all reactions)...............   25.769 [  23] (100.0%)
+  ES total particle counts (all reactions)...............    0.000 [   0] (  0.0%)
+

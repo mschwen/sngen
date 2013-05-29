@@ -1,0 +1,3 @@
+rm sn_counts.dat;ln -s sn_counts_50000.dat sn_counts.dat
+rm sn_counts.dat;ln -s sn_counts_Burrows.dat sn_counts.dat
+rm sn_counts.dat;ln -s sn_counts_BeacomVogel.dat sn_counts.dat

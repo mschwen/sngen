@@ -1,0 +1,4 @@
+rm xs_nu_d_cc.dat
+ln -s xs_nu_d_cc_NSAP02.dat xs_nu_d_cc.dat
+rm xs_nu_d_nc.dat
+ln -s xs_nu_d_nc_NSAP02.dat xs_nu_d_nc.dat
