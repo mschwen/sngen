@@ -1,0 +1,4 @@
+sngen
+=====
+
+SNO supernova generator
