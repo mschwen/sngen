@@ -20,11 +20,13 @@
       INCLUDE 'interaction_total.inc'
       INCLUDE 'sample_count_size.inc'
       INCLUDE 'convert_units.inc'
+      INCLUDE 'interaction_names.inc'
+      INCLUDE 'sn_classes.inc'
 
 C  Common Block Declarations
 
-      COMMON /sn_interaction_names/ interaction_name
-      CHARACTER*100 interaction_name(interaction_total)
+c      COMMON /sn_interaction_names/ interaction_name
+c      CHARACTER*100 interaction_name(interaction_total)
 
       COMMON /part_sample_file/ part_sample_file
       CHARACTER*100 part_sample_file
@@ -32,6 +34,9 @@ C  Common Block Declarations
       COMMON /mcpl_stuff/ mcpl_flag, mcpl_file, mcpl_default
       INTEGER mcpl_flag
       CHARACTER*100 mcpl_file, mcpl_default
+
+C      COMMON /exp_id/ exp_id
+C      INTEGER exp_id
 
 C  Global Variable Declarations (in)
 
@@ -42,6 +47,10 @@ C  Local Variable Declarations
       INTEGER num_part, id_part
       REAL*8 time, energy, u, v, w
       REAL*8 x, y, z
+      CHARACTER*57  int_name
+      INTEGER exp_id
+
+
 
       INTEGER i
 
@@ -102,7 +111,23 @@ C      WRITE (*,*) interaction, num_counts
 75    FORMAT ('#.')
       WRITE (98,80) 
 80    FORMAT ('#.  MCPL file for the following supernova interaction:') 
-      WRITE (98,90) interaction_name(interaction)
+* Interaction names are convoluted by experiment type
+* Butchered by MHS, sorry HALO
+      exp_id = 2;
+      IF (interaction .LT. first_SNOP) THEN
+* This takes care of SNO interactions and SNOP water/AV interactions that were 
+* present in SNO
+        int_name = interaction_name(interaction)
+      ELSEIF (exp_id .EQ. 2) THEN
+* This takes care of new interactions in SNOP and interactions in HALO
+        int_name = interaction_name(interaction_total_SNO 
+     +    + interaction - first_SNOP + interaction_total_SNOP 
+     +    - LAB_size + 1)
+      ELSEIF (exp_id .EQ. 3) THEN
+        int_name = interaction_name(interaction_total_SNO
+     +    + interaction_total_SNOP + interaction - first_HALO + 1)
+      ENDIF
+      WRITE (98,90) int_name
 90    FORMAT ('#.  ', a)
       WRITE (98,100) 
 100   FORMAT ('#.')
